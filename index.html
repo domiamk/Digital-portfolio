@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F5F0FF; /* Very light purple */
+            color: #333333; /* Dark gray text */
+        }
+
+        header {
+            background-color: #D2B4FC; /* Updated deep purple */
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .header-content h1 {
+            font-size: 2.5rem;
+        }
+
+        nav {
+            background-color: #000000; /* Changed to black */
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #FFFFFF; /* Changed text to white */
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #E67E22; /* Warm orange highlight */
+        }
+
+        .section-content {
+            background-color: #E0D1FF; /* Light purple background */
+            padding: 2rem;
+            margin: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .download-button {
+            background-color: #C9B2FF; /* Medium light purple */
+            color: #fff;
+            padding: 0.7rem 1.5rem;
+            text-decoration: none;
+            border-radius: 20px;
+            display: inline-block;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .download-button:hover {
+            background-color: #E67E22; /* Warm orange */
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #D2B4FC; /* Updated deep purple */
+            color: #fff;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Domia M K</h1>
+            <p>I'm a computer science student</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#achievement">Achievement</a></li>
+            <li><a href="#resume">Resume</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <div class="section-content">
+            <h2>About Me</h2>
+            <p>I'm a second-year Computer Science student passionate about coding and problem-solving. Currently, I'm exploring data structures and algorithms to build my career.</p>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="section-content">
+            <h2>Education</h2>
+            <p><b>Higher Secondary Education (10th and 12th)</b></p>
+            <p><b>School:</b> Dr. Sivanthi Adithanar Matric Hr Sec School</p>
+            <p><b>College:</b> Soka Ikeda College of Arts and Science for Women - BSc Computer Science</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="section-content">
+            <h2>Skills</h2>
+            <ul>
+                <li>Python</li>
+                <li>Java</li>
+                <li>HTML</li>
+                <li>CSS</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="achievement">
+        <div class="section-content">
+            <h2>Achievement</h2>
+            <ul>
+                <li>Participation in my college's World Record event</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="resume">
+        <div class="section-content">
+            <center>
+                <h2>Resume</h2>
+                <a href="documents/file.pdf" target="_blank" class="download-button">Download CV</a>
+            </center>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Domia M K</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 50,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
